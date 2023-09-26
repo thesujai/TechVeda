@@ -309,10 +309,8 @@ def mainFunc():
     st.write(f'Ayurvedic Cure:')
     l=ayurvedic_cures[data['disease']]
     for i in l:
-        # st.write(f'{i}')\
         i_parts = i.split(":", 1)
         searchUrl=urlencode({"q":{i_parts[0]}})
-        print(searchUrl)
         st.markdown(f"{i}(https://www.go ogle.com/search?q={searchUrl})")
 
 
