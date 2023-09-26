@@ -1,9 +1,9 @@
-import cv2
 import streamlit as st
 from data.symptoms import symptoms
 import numpy as np
 import pandas as pd
 from sklearn.naive_bayes import MultinomialNB
+from urllib.parse import urlencode
 
 
 ayurvedic_cures = {
@@ -310,6 +310,9 @@ def mainFunc():
     l=ayurvedic_cures[data['disease']]
     for i in l:
         # st.write(f'{i}')\
-        st.markdown(f"{i}(https://www.google.com")
+        i_parts = i.split(":", 1)
+        searchUrl=urlencode({"q":{i_parts[0]}})
+        print(searchUrl)
+        st.markdown(f"{i}(https://www.go ogle.com/search?q={searchUrl})")
 
 
