@@ -1,5 +1,6 @@
 import streamlit as st
 from data.symptoms import symptoms
+from result import result
 
 def SymptomSelection():
     # st.title("Symptom Checker")
@@ -11,3 +12,13 @@ def SymptomSelection():
     symptom3 = st.selectbox("Symptom 3", ["Select a Symptom"]+symptoms)
     symptom4 = st.selectbox("Symptom 4", ["Select a Symptom"]+symptoms)
     symptom5 = st.selectbox("Symptom 5", ["Select a Symptom"]+symptoms)
+    
+    if st.button("Submit"):
+        # model integration
+        data={'disease':'cancer',
+              'treatment':{
+                  'chemo':'adasdasd',
+                  'a':'fewfewfew',
+              }
+              }
+        result(data)
