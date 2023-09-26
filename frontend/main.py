@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from homepage import home
-from SelectSymptoms import SymptomSelection
+from frontend.selectSymptoms import SymptomSelection
 
 # data = pd.read_csv("/path")
 
