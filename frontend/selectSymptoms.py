@@ -15,5 +15,10 @@ def SymptomSelection():
     
     if st.button("Submit"):
         # model integration
-        data={}
+        data={'disease':'cancer',
+              'treatment':{
+                  'chemo':'adasdasd',
+                  'a':'fewfewfew',
+              }
+              }
         result(data)
