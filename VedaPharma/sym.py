@@ -311,6 +311,6 @@ def mainFunc():
     for i in l:
         i_parts = i.split(":", 1)
         searchUrl=urlencode({"q":{i_parts[0]}})
-        st.markdown(f"{i}(https://www.go ogle.com/search?q={searchUrl})")
+        st.markdown(f"{i}(https://www.google.com/search?q={searchUrl})")
 
 
