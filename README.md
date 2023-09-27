@@ -9,7 +9,7 @@ Running it locally:
 3) Create a virtual environment(Optional)
 4) Run
 ```bash
-pip freeze > requirements.txt
+pip install -r requirements.txt
 ```
 5) Run
 ```bash
