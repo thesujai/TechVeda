@@ -11,11 +11,11 @@ Running it locally:
 ```bash
 pip freeze > requirements.txt
 ```
-4) Run
+5) Run
 ```bash
 cd VedaPharma
 ```
-5) Run
+6) Run
 ```bash
 streamlit run main.py
 ```
