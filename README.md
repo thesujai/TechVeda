@@ -15,7 +15,7 @@ pip install -r requirements.txt
 ```bash
 cd VedaPharma
 ```
-6) Run
+6) Run the app
 ```bash
 streamlit run main.py
 ```
