@@ -305,12 +305,13 @@ def mainFunc():
         data['disease'] = predicted_disease
 
     
-    st.write(f"Predicted Disease: {data['disease']}")
+    st.write(f"Predicted Disease: {data.get('disease', 'Not Predicted')}")
     st.write(f'Ayurvedic Cure:')
-    l=ayurvedic_cures[data['disease']]
-    for i in l:
-        i_parts = i.split(":", 1)
-        searchUrl=urlencode({"q":{i_parts[0]}})
-        st.markdown(f"{i}(https://www.google.com/search?q={searchUrl})")
+    l = ayurvedic_cures.get(data.get('disease', []))
+    if l:
+        for i in l:
+            i_parts = i.split(":", 1)
+            searchUrl=urlencode({"q":{i_parts[0]}})
+            st.markdown(f"{i}(https://www.google.com/search?q={searchUrl})")
 
 
